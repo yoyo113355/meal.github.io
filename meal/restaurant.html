@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>期末作業</title>
+        <style type="text/css">
+        body{background-color:#aaf}
+        ul{color:#faa;background:#153;font-size:20px}
+        ol{color:#0f0;background:#faf;font-size:20px}
+        h1{color:#00f;background:#669999;margin:7.5px}
+        label{color:#f0f}
+        dl{color:#f00;font-size:20px}
+        #head{background:#afa;text-align:center}
+        #left{float:left;background:#ffA;width:25%;border-style: dashed}
+        #right1{float:right;background:#afa;width:25%;border-style: dashed} 
+        #content{margin-left:26%;margin-right:26%;background:#fca;border-style: dashed}
+        #foot{clear:both;background:#556677;text-align:center}
+        .a{text-align:center}
+        .b{text-align:center}
+        .wrap{width:100%;margin:auto;display:flex}
+        .iteam{width:100%;margin:0 10px 10px}
+        .item img{width:100%;vertical-align:top}
+        .hide{display:none}
+        </style>
+        <script type="text/javascript">
+        function addpeople()
+        {
+           var people=document.getElementById("people");
+        if(people.value==""){
+          alert("請輸入姓名!!");
+        }
+        else{
+           var txtNode = document.createTextNode(people.value);
+           var li = document.createElement("li");
+           li.appendChild(txtNode);
+           var list = document.getElementById("list");
+           list.appendChild(li);
+           document.getElementById("peopleCount").innerText=list.children.length;
+        }
+        }
+           function Menu(number)
+        {
+          var menu=document.getElementById("menu-"+number);
+          menu.classList.toggle("hide");
+        }
+        </script>
+    </head>
+    <body>
+      <div id="head">
+        <h1>我的小屋</h1>
+        </div>
+      <div id="left">
+      <h1 class="a">自我介紹</h1>
+        <div onclick="Menu(1);">1.個人資料</div>
+          <ul id="menu-1">
+            <li>姓名:卓裕智</li>
+            <li>性別:男</li>
+            <li>學歷:宜蘭大學土木一乙</li>
+          </ul></pre>
+          <div onclick="Menu(2);">2.興趣喜好</div>
+            <ol id="menu-2">
+              <li>遊戲</li><img src="https://img.lovepik.com/original_origin_pic/18/11/09/eb7409d213a7357a95e3f7a321582306.png_wh300.png" style="width:100px;height:120px;">
+              <li>小說</li><img src="https://png.pngtree.com/element_our/20190530/ourlarge/pngtree-stacked-creative-book-illustration-image_1245638.jpg" style="width:100px;height:120px;">
+              <li>漫畫</li><img src="https://png.pngtree.com/element_our/20190530/ourlarge/pngtree-stacked-creative-book-illustration-image_1245638.jpg" style="width:100px;height:120px;">
+              <li>電影</li><img src="https://www.vscinemas.com.tw/vsweb/upload/film/film_20230218036.jpg" style="width:200px;height:300px;">
+            </ol>
+      <div onclick="Menu(3);">3</div>
+          <dl id="menu-3">
+        <dt>喜歡的東西:</dt>
+        <dd>1.小動物</dd><img src="https://cdn.hk01.com/di/media/images/3389123/org/665fea873304cdfe2404d3fb4cea9c74.jpg/C4YkLBeZKGC0is2TY0DvpULmTU4xc6VMXOvfo1zr36M?v=w1920" style="width:200px;height:300px">
+        <dd>2.好吃的</dd>
+        <dd>3.可愛的</dd>
+          </dl>
+      <div onclick="Menu(4);">4.擅長的</div>
+      <ol id="menu-4">
+          <li>料理</li>
+          <li>整理</li>
+          <li>學習？</li>
+      </ol>
+      <table border=5 cellpadding=10>
+        <tr>
+          <td>Gmail</td>
+          <td>phone</td>
+          <td>Line</td>
+        </tr>
+        <tr>
+          <td>不給</td>
+          <td>不給</td>
+          <td>不給</td>
+        </tr>
+        </table>
+      </ul>
+        <fieldset>
+        <legend><i>表單連結</i></legend>
+        <label>(<a href="https://codepen.io/nailcho/pen/ExewQYK">進入餐廳菜單?</a>)</label><br>
+      <label>(<a href="https://codepen.io/nailcho/pen/ExewQYK" target="_black">開新視窗</a>)</label><br>
+      <label>(<a href="https://codepen.io/nailcho/pen/ExewQYK" target="_top">於上層視窗開啟</a>)</label>
+        </fieldset>
+      </div>
+      <div id="right1">
+      <h1 class="b"><i>餐廳</i></h1>
+      <hr>
+      <fieldset>
+      <legend><h1>會員登入</h1></legend>
+        <label>帳號:<input name="account" type="text" size="10"></label><br>
+        <label>密碼:<input name="pass" type="password" size="10"></label><br>
+        <label>
+          <button onclick="document.write('<p>沒有這功能</p>');">登入!</button>
+          </label>
+        </fieldset>
+        <fieldset>
+        <legend><h1>預約用餐</h1></legend>
+        <label>預約日期:<input name="check date" type="date" value="2023-03-15"></label><br>
+        <label>預約用餐時間:<input name="meals time" type="time" value="11:00"></label><br>
+            <label><p>
+              姓名:<input id="people" type="text">
+              <button onclick="addpeople()">添加</button>
+            </p>
+            <p>目前有<span id="peopleCount">0</span>位人<p>
+            <ul id="list"></ul>
+          </label><br>
+        <label>迎賓燈色彩:<input name="color" type="color" value="#ff00ff"></label><br>
+        <label><input type="reset" value="清除"></label>
+        <label><button onclick="document.write('<p>也沒有這功能</p>');">預約!</button></label>
+          </fieldset>
+        <fieldset>
+          <legend><h1>餐點選擇</h1></legend>
+        <label>請問你想吃的主餐:<select name="main meal">
+        <optgroup label="肉類">
+          <option value="1">牛排
+          <option value="2">鴨胸
+          <option value="3">雞腿
+        </optgroup>
+        <optgroup label="澱粉類">
+          <option value="1">燉飯
+          <option value="2">義大利麵
+          <option value="3">囊餅
+        </optgroup>
+        </select><br>
+        請問你想吃的麵包:<select name="bread">
+        <optgroup label="麵包">
+          <option value="1">法國麵包
+          <option value="2">餐包
+        </optgroup>
+        </select><br>
+        請問你想吃的開胃菜:<select name="appetizer">
+        <optgroup label="開胃菜">
+          <option value="1">凱薩沙拉
+          <option value="2">煙燻鮭魚
+          <option value="3">綜合蔬果
+        </optgroup>
+        </select><br>
+        請問你想吃的濃湯:<select name="soup">
+        <optgroup label="濃湯">
+          <option value="1">巧達濃湯
+          <option value="2">蘑菇濃湯
+          <option value="3">海鮮清湯
+        </optgroup>
+        </select><br>
+        請問你想吃的甜點:<select name="dessert">
+        <optgroup label="甜點">
+          <option value="1">烤布蕾
+          <option value="2">冰淇淋
+          <option value="3">黑糖蕨餅
+          <option value="4">布朗尼
+        </optgroup>
+        </select></label><br>
+        </fieldset>
+      <br>
+        <fieldset>
+        <legend><h1>滿意度調查表</h1></legend>
+        <label>姓名:<input name="name" type="text" size="10"><br>
+        性別:<input name="sex" type="radio" value="male">男
+             <input name="sex" type="radio" value="female">女</label><br>
+          </fieldset>
+        <fieldset>
+          <legend><h3><i>你今晚最喜歡的餐點:</i></h3></legend>
+        <label><input name="food" type="checkbox" value="main meal">主餐
+        <input name="food" type="checkbox" value="bread">麵包
+        <input name="food" type="checkbox" value="soup">濃湯
+        <input name="food" type="checkbox" value="appetizer">開胃菜
+        <input name="food" type="checkbox" value="dessert">甜點</label><br>
+        <button onclick="document.write('<p>這裡真的沒有功能</p>');">確認!</button><br>
+        </fieldset>
+        <fieldset>
+        <legend><h3><i>對餐點的滿意度:</i></h3></legend>
+        <label>開胃菜:不喜歡??<input name="Meals" type="range" min="1" max="5">喜歡!!<br>
+        濃湯:不喜歡??<input name="Meals" type="range" min="1" max="5">喜歡!!<br>
+        副餐:不喜歡??<input name="Meals" type="range" min="1" max="5">喜歡!!<br>
+        主餐:不喜歡??<input name="Meals" type="range" min="1" max="5">喜歡!!<br>
+        甜點:不喜歡??<input name="Meals" type="range" min="1" max="5">喜歡!!</label><br>
+        </fieldset>
+          <fieldset>
+        <legend><h3><i>對服務的滿意度:</i></h3></legend>
+        <label>送餐速度:不喜歡??<input name="Serve" type="range" min="1" max="5">喜歡!!<br>
+        桌邊服務:不喜歡??<input name="Serve" type="range" min="1" max="5">喜歡!!<br>
+        人員態度:不喜歡??<input name="Serve" type="range" min="1" max="5">喜歡!!</label><br>
+          </fieldset>
+        <fieldset>
+        <legend><h3><i>對環境的滿意度:</i></h3></legend>
+        <label>燈光:不喜歡??<input name="Meals" type="range" min="1" max="5">喜歡!!<br>
+        桌位:不喜歡??<input name="Meals" type="range" min="1" max="5">喜歡!!<br>
+        地面:不喜歡??<input name="Meals" type="range" min="1" max="5">喜歡!!</label><br>
+          </fieldset>
+          <fieldset>
+          <legend><h1>對餐廳的建議</h1></legend>
+        <textarea name="comment" rows="5" cols="20"></textarea><br>
+        <label>E-mail:<input name="email" type="email"><br>
+        連絡電話:<input name="tel" id="tel" type="tel"></label><br>
+        <input type="reset" value="清除">
+        <button onclick="document.write('<p>不要再點了!!!</p>');">登入!</button>
+            </fieldset>
+      </div>
+      <hr>
+      <div id="content">
+        <div class="wrap">
+          <div class="item">
+            <img src="https://picsum.photos/id/292/400/300" alt="">
+            <h2>我們餐廳對於食材的品質很注重，採購的都是當地的新鮮蔬菜，雖然成本可能較高，但我們認為當地蔬果才是最新鮮健康的。
+            </h2>
+            </div>
+          </div>
+        <div class="wrap">
+          <div class="item">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60" style="width:3=400px;height:300px;">
+            <h2>主菜每一道都是我們經過無數次嘗試後最後的成品，透過單純卻不簡單烹飪調製而成。
+            </h2>
+            </div>
+          </div>
+          <div class="wrap">
+          <div class="item">
+            <img src="https://picsum.photos/id/431/400/300" alt="">
+            <h2>我們的咖啡都是每天現磨咖啡豆沖泡出來的，再加上創意的拉花，成為了每位顧客每次必點的飲品。
+            </h2>
+            </div>
+          </div>
+        <div class="wrap">
+          <div class="item">
+            <img src="https://picsum.photos/id/493/400/300" alt="">
+            <h2>甜點都是我們親手每天現做，所以每人只能限量一份，尤其是奶酪一天只有100份，賣完就只能下次再來。
+            </h2>
+            </div>
+          </div>
+      </div>
+      <div id="foot">
+        <h1>此網站由卓裕智製作，偶爾更新，勿念!!</h1>
+        </div>
+    </body>
+</html>
