@@ -1,0 +1,17 @@
+body{background-color:#aaf}
+ul{color:#faa;background:#153;font-size:20px}
+ol{color:#0f0;background:#faf;font-size:20px}
+h1{color:#00f;background:#669999;margin:7.5px}
+label{color:#f0f}
+dl{color:#f00;font-size:20px}
+#head{background:#afa;text-align:center}
+#left{float:left;background:#ffA;width:25%;border-style: dashed}
+#right1{float:right;background:#afa;width:25%;border-style: dashed} 
+#content{margin-left:26%;margin-right:26%;background:#fca;border-style: dashed}
+#foot{clear:both;background:#556677;text-align:center}
+.a{text-align:center}
+.b{text-align:center}
+.wrap{width:100%;margin:auto;display:flex}
+.iteam{width:100%;margin:0 10px 10px}
+.item img{width:100%;vertical-align:top}
+.hide{display:none}

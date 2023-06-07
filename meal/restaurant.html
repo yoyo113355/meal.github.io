@@ -3,51 +3,18 @@
     <head>
         <meta charset="utf-8"/>
         <title>期末作業</title>
-        <style type="text/css">
-        body{background-color:#aaf}
-        ul{color:#faa;background:#153;font-size:20px}
-        ol{color:#0f0;background:#faf;font-size:20px}
-        h1{color:#00f;background:#669999;margin:7.5px}
-        label{color:#f0f}
-        dl{color:#f00;font-size:20px}
-        #head{background:#afa;text-align:center}
-        #left{float:left;background:#ffA;width:25%;border-style: dashed}
-        #right1{float:right;background:#afa;width:25%;border-style: dashed} 
-        #content{margin-left:26%;margin-right:26%;background:#fca;border-style: dashed}
-        #foot{clear:both;background:#556677;text-align:center}
-        .a{text-align:center}
-        .b{text-align:center}
-        .wrap{width:100%;margin:auto;display:flex}
-        .iteam{width:100%;margin:0 10px 10px}
-        .item img{width:100%;vertical-align:top}
-        .hide{display:none}
-        </style>
-        <script type="text/javascript">
-        function addpeople()
-        {
-           var people=document.getElementById("people");
-        if(people.value==""){
-          alert("請輸入姓名!!");
-        }
-        else{
-           var txtNode = document.createTextNode(people.value);
-           var li = document.createElement("li");
-           li.appendChild(txtNode);
-           var list = document.getElementById("list");
-           list.appendChild(li);
-           document.getElementById("peopleCount").innerText=list.children.length;
-        }
-        }
-           function Menu(number)
-        {
-          var menu=document.getElementById("menu-"+number);
-          menu.classList.toggle("hide");
-        }
-        </script>
+        <link rel="stylesheet" href="css.css">
+        <script src="javascript.js"></script>
     </head>
     <body>
       <div id="head">
         <h1>我的小屋</h1>
+        <fieldset>
+          <legend><i>表單連結</i></legend>
+          <label>(<a href="https://yoyo113355.github.io/menu.github.io/menu/menu.html">進入餐廳菜單?</a>)</label>
+          <label>(<a href="https://yoyo113355.github.io/survey.github.io/survey/survey.html">進入調查表?</a>)</label>
+          <label>(<a href="https://yoyo113355.github.io/reserve.github.io/reserve/reserve.html">預約用餐</a>)</label>
+        </fieldset>
         </div>
       <div id="left">
       <h1 class="a">自我介紹</h1>
@@ -89,13 +56,6 @@
           <td>不給</td>
         </tr>
         </table>
-      </ul>
-        <fieldset>
-        <legend><i>表單連結</i></legend>
-        <label>(<a href="https://codepen.io/nailcho/pen/ExewQYK">進入餐廳菜單?</a>)</label><br>
-      <label>(<a href="https://codepen.io/nailcho/pen/ExewQYK" target="_black">開新視窗</a>)</label><br>
-      <label>(<a href="https://codepen.io/nailcho/pen/ExewQYK" target="_top">於上層視窗開啟</a>)</label>
-        </fieldset>
       </div>
       <div id="right1">
       <h1 class="b"><i>餐廳</i></h1>
